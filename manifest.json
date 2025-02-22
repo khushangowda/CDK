@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Voice Command Browser",
+  "version": "1.0.1",
+  "description": "Browse the web using voice commands",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "commands": {
+    "activate_extension": {
+      "suggested_key": { "default": "Ctrl+Shift+V" },
+      "description": "Activate Voice Recognition"
+    },
+    "deactivate_extension": {
+      "suggested_key": { "default": "Ctrl+Shift+Q" },
+      "description": "Deactivate Voice Recognition"
+    },
+    "open_new_tab": {
+      "suggested_key": { "default": "Ctrl+Shift+3" },
+      "description": "Open New Tab"
+    }
+  }
+}
