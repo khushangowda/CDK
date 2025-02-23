@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Command Assistant</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <h1>Voice Assistant</h1>
+
+    <!-- Status Indicator -->
+    <p id="status">Click the mic to start listening</p>
+
+    <!-- Mic Icon (Toggles Voice Recognition) -->
+    <img id="mic-icon" src="icons/mic-off-128.png" alt="Microphone">
+
+    <!-- Buttons -->
+    <button id="start-btn">Start Listening</button>
+    <button id="stop-btn" disabled>Stop Listening</button>
+
+    <!-- Command Log -->
+    <div id="command-log"></div>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>

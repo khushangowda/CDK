@@ -1,0 +1,93 @@
+/* General Popup Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgba(20, 20, 20, 0.85); /* Dark semi-transparent background */
+    color: white;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+/* Heading */
+h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f8f9fa;
+}
+
+/* Status Message */
+#status {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4CAF50; /* Green when active */
+}
+
+/* Mic Icon */
+#mic-icon {
+    width: 64px;
+    height: 64px;
+    margin: 10px auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animation for Active Listening */
+.listening #mic-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 8px #4CAF50);
+}
+
+/* Buttons */
+button {
+    background: #4CAF50; /* Green button */
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #45a049;
+}
+
+/* Disabled Button */
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/* Command Log Styling */
+#command-log {
+    max-height: 100px;
+    overflow-y: auto;
+    font-size: 12px;
+    text-align: left;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #ddd;
+}
+
+/* Scrollbar Style for Command Log */
+#command-log::-webkit-scrollbar {
+    width: 5px;
+}
+
+#command-log::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+#command-log::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
